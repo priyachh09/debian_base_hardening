@@ -16,8 +16,8 @@ This project provides a fully hardened Debian 12 (Bookworm) base server image, c
 ```bash
 git clone https://github.com/yourusername/debian-base-hardening.git
 cd debian-base-hardening
-chmod +x master_hardening.sh
-sudo ./master_hardening.sh
+chmod +x master_script.sh
+sudo ./master_script.sh
 ```
 
 All logs are saved in /var/log/hardening/.
