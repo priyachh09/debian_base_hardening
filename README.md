@@ -45,6 +45,7 @@ All logs are saved in /var/log/hardening/.
 ## Security Audit Result
 This system was audited using [Lynis](https://cisofy.com/lynis/), yielding a final security score of:
 > **Lynis Audit Score: 85**
+
 Logs and full reports are saved in `/var/log/hardening/`.
 
 ## Contact
