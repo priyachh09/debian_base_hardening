@@ -11,14 +11,13 @@ export DEBIAN_FRONTEND=noninteractive
 LOG_DIR="/var/log/hardening"
 mkdir -p "$LOG_DIR"
 
-SCRIPT_DIR="$(cd "$(dirname "$0")/scripts" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")/Hardening_scripts" && pwd)"
 
 echo "[+] Starting Full System Hardening at $(date)"
 
 # Run each script in order
 for script in \
   ex_utilities.sh \
-  unattended_upgrades.sh \
   disable_unused_accounts.sh \
   blacklist_protocols.sh \
   kernel_sysctl_hardening.sh \
@@ -34,7 +33,8 @@ for script in \
   fail2ban_setup.sh \
   ufw_setup.sh \
   rkhunter_setup.sh \
-  rsyslog_logrotate_setup.sh 
+  rsyslog_logrotate_setup.sh \
+  unattended_upgrades_setup.sh
 do
     echo "[*] Running $script..."
     bash "$SCRIPT_DIR/$script"
