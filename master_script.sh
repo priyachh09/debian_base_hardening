@@ -11,7 +11,7 @@ export DEBIAN_FRONTEND=noninteractive
 LOG_DIR="/var/log/hardening"
 mkdir -p "$LOG_DIR"
 
-SCRIPT_DIR="$(cd "$(dirname "$0")/../scripts" && pwd)"
+SCRIPT_DIR="$(cd "$(dirname "$0")/scripts" && pwd)"
 
 echo "[+] Starting Full System Hardening at $(date)"
 
